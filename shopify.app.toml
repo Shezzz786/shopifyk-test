@@ -2,7 +2,7 @@
 
 client_id = "cfc26477f4c7c7d248c24da72f6b2438"
 name = "futureblink-test-app"
-application_url = "https://gateway-upper-somewhat-lynn.trycloudflare.com"
+application_url = "https://shopifyk-test.vercel.app"
 embedded = true
 
 [build]
@@ -24,7 +24,7 @@ api_version = "2026-04"
 scopes = "write_metaobject_definitions,write_metaobjects,write_products"
 
 [auth]
-redirect_urls = [ "https://gateway-upper-somewhat-lynn.trycloudflare.com/api/auth" ]
+redirect_urls = [ "https://shopifyk-test.vercel.app/api/auth" ]
 
 [product.metafields.app.demo_info]
 type = "single_line_text_field"
