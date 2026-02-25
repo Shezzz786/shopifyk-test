@@ -1,0 +1,52 @@
+{% if shop.metafields.my_app.announcement %}
+  <div id="announcement-banner">
+    <span>
+      {{ shop.metafields.my_app.announcement }}
+    </span>
+
+    <button id="announcement-close">✕</button>
+  </div>
+
+  <style>
+    #announcement-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #fff;
+      padding: 12px 40px;
+      text-align: center;
+      z-index: 99999;
+      font-size: 14px;
+    }
+
+    #announcement-close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    body {
+      padding-top: 50px;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const closeBtn = document.getElementById("announcement-close");
+      const banner = document.getElementById("announcement-banner");
+
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+          banner.style.display = "none";
+        });
+      }
+    });
+  </script>
+{% endif %}
