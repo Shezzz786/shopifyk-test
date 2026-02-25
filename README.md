@@ -65,12 +65,7 @@ Create a `.env` file in the root directory:
 # MongoDB
 DATABASE_URL="mongodb+srv://username:password@cluster0.mongodb.net/shopify-app?retryWrites=true&w=majority"
 
-# Shopify
-SHOPIFY_API_KEY=your_api_key
-SHOPIFY_API_SECRET=your_api_secret
-SHOPIFY_APP_URL=https://your-tunnel-url.ngrok-free.app
-SCOPES=read_metafields,write_metafields
-```
+
 
 Example MongoDB URL:
 
@@ -120,28 +115,6 @@ Press `P` to open the app preview.
 
 ---
 
-## Authenticating and Querying Data
-
-To authenticate and query Shopify data:
-
-```js
-export async function loader({ request }) {
-  const { admin } = await shopify.authenticate.admin(request);
-
-  const response = await admin.graphql(`
-    {
-      shop {
-        name
-      }
-    }
-  `);
-
-  const data = await response.json();
-  return data;
-}
-```
-
----
 
 ## Deployment
 
